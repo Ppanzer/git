@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/wisely" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/wisely/highlight_spring4/ch2/scope/Main.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/wisely/highlight_spring4/ch2/scope/ScopeConfig.java" charset="GBK" />
+  </component>
+</project>

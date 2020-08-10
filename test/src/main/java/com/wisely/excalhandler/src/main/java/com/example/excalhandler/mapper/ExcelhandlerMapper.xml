@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.excalhandler.mapper.ExcelhandlerMapper">
+    <insert id="insertinfo" parameterType="java.util.List" useGeneratedKeys="true">
+        INSERT INTO mybatis.excelhandler (
+            wind,
+            rain,
+            temperature,
+            rainacc,
+            presure,
+            direction,
+            humidity,
+            noise,
+            illumination,
+            pm10,
+            pm25,
+            creatingtime
+        )
+        VALUES
+        <foreach collection="list" item="list" index="index" separator=",">
+            (
+            #{list.wind},
+            #{list.rain},
+            #{list.temperature},
+            #{list.rainacc},
+            #{list.pressure},
+            #{list.direction},
+            #{list.humidity},
+            #{list.noise},
+            #{list.illumination},
+            #{list.pm10},
+            #{list.pm25},
+            #{list.creatingtime}
+            )
+        </foreach>
+    </insert>
+</mapper>

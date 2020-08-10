@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/MyMvcConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/service" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/web/ch4_3" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/web/ch4_5/AysncController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/web/ch4_5/ContentController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/web/ch4_5/ConverterController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/web/ch4_5/SseController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/springmvc/web/ch4_5/UploadController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/assets/js/jquery.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/async.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/converter.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/error.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/index.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/page.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/sse.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views/upload.jsp" charset="GBK" />
+  </component>
+</project>

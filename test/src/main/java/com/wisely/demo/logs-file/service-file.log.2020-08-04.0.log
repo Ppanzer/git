@@ -1,0 +1,1599 @@
+2020-08-04 21:14:46.989 INFO  [org.springframework.test.context.support.AbstractTestContextBootstrapper:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.DemoApplicationTests], using SpringBootContextLoader
+2020-08-04 21:14:46.997 INFO  [org.springframework.test.context.support.AbstractContextLoader:264] - Could not detect default resource locations for test class [com.example.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-08-04 21:14:46.997 INFO  [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils:83] - Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-08-04 21:14:47.116 INFO  [org.springframework.boot.test.context.SpringBootTestContextBootstrapper:237] - Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+2020-08-04 21:14:47.244 INFO  [org.springframework.test.context.support.AbstractTestContextBootstrapper:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-04 21:14:47.260 INFO  [org.springframework.test.context.support.AbstractTestContextBootstrapper:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@791d1f8b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2415fc55, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@14f232c4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13bc8645, org.springframework.test.context.support.DirtiesContextTestExecutionListener@24c22fe, org.springframework.test.context.transaction.TransactionalTestExecutionListener@93081b6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cd1e646, org.springframework.test.context.event.EventPublishingTestExecutionListener@7ba8c737, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1890516e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@15a04efb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16c069df, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2bec854f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@31edaa7d]
+2020-08-04 21:14:50.667 INFO  [com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor:195] - LOCAL_SNAPSHOT_PATH:C:\Users\xjq\nacos\config
+2020-08-04 21:14:50.747 INFO  [com.alibaba.nacos.client.config.impl.Limiter:53] - limitTime:5.0
+2020-08-04 21:14:53.824 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:14:53.824 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:14:53.832 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2020-08-04 21:14:53.832 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:14:53.832 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:14:53.832 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo] & group[DEFAULT_GROUP]
+2020-08-04 21:14:55.849 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:14:57.855 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:14:57.855 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:14:57.855 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:145)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2020-08-04 21:14:57.855 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:14:57.855 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:14:57.855 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo.properties] & group[DEFAULT_GROUP]
+2020-08-04 21:14:57.855 INFO  [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:105] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-demo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-demo,DEFAULT_GROUP'}]
+2020-08-04 21:14:57.871 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 21:14:58.543 WARN  [org.mybatis.logging.Logger:44] - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2020-08-04 21:14:58.623 INFO  [org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=e0e1ca11-a9ab-3c23-89bf-f4159193b147
+2020-08-04 21:14:58.782 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a31fc061] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:14:58.894 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 21:14:59.222 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:14:59.294 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:14:59.310 WARN  [org.springframework.context.support.AbstractApplicationContext:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadController': Unsatisfied dependency expressed through field 'uploadservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadService': Unsatisfied dependency expressed through field 'messagemapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.demo.mapper.MessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-08-04 21:14:59.318 INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-04 21:14:59.438 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field messagemapper in com.example.demo.demoservice.UploadService required a bean of type 'com.example.demo.mapper.MessageMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.demo.mapper.MessageMapper' in your configuration.
+
+2020-08-04 21:14:59.438 ERROR [org.springframework.test.context.TestContextManager:248] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@791d1f8b] to prepare test instance [com.example.demo.DemoApplicationTests@59fbb34]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadController': Unsatisfied dependency expressed through field 'uploadservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadService': Unsatisfied dependency expressed through field 'messagemapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.demo.mapper.MessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadService': Unsatisfied dependency expressed through field 'messagemapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.demo.mapper.MessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.demo.mapper.MessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1717)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2020-08-04 21:16:43.875 INFO  [com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor:195] - LOCAL_SNAPSHOT_PATH:C:\Users\xjq\nacos\config
+2020-08-04 21:16:43.891 INFO  [com.alibaba.nacos.client.config.impl.Limiter:53] - limitTime:5.0
+2020-08-04 21:16:45.904 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:16:47.910 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:16:47.910 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:16:47.910 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:13)
+2020-08-04 21:16:47.910 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:16:47.910 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:16:47.910 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo] & group[DEFAULT_GROUP]
+2020-08-04 21:16:49.926 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:16:51.932 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:16:51.932 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:16:51.932 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:145)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:13)
+2020-08-04 21:16:51.932 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:16:51.932 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:16:51.932 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo.properties] & group[DEFAULT_GROUP]
+2020-08-04 21:16:51.932 INFO  [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:105] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-demo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-demo,DEFAULT_GROUP'}]
+2020-08-04 21:16:51.940 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 21:16:52.295 WARN  [org.mybatis.logging.Logger:44] - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2020-08-04 21:16:52.347 INFO  [org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=8c3aa684-4f15-3e61-a9e1-ce7d9a767b34
+2020-08-04 21:16:52.387 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d28ef001] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:16:52.411 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 21:16:52.556 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:16:52.588 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:16:52.756 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 21:16:52.843 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:16:52.843 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 21:16:52.843 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 21:16:52.944 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 21:16:52.944 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 1004 ms
+2020-08-04 21:16:52.983 WARN  [org.springframework.context.support.AbstractApplicationContext:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadController': Unsatisfied dependency expressed through field 'uploadservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadService': Unsatisfied dependency expressed through field 'messagemapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.demo.mapper.MessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-08-04 21:16:52.983 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Stopping service [Tomcat]
+2020-08-04 21:16:52.993 INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-04 21:16:53.070 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field messagemapper in com.example.demo.demoservice.UploadService required a bean of type 'com.example.demo.mapper.MessageMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.demo.mapper.MessageMapper' in your configuration.
+
+2020-08-04 21:19:01.685 INFO  [com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor:195] - LOCAL_SNAPSHOT_PATH:C:\Users\xjq\nacos\config
+2020-08-04 21:19:01.706 INFO  [com.alibaba.nacos.client.config.impl.Limiter:53] - limitTime:5.0
+2020-08-04 21:19:03.721 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:19:05.726 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:19:05.726 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:19:05.726 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:13)
+2020-08-04 21:19:05.726 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:19:05.726 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:19:05.726 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo] & group[DEFAULT_GROUP]
+2020-08-04 21:19:07.731 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:19:09.740 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:19:09.740 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:19:09.740 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:145)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:13)
+2020-08-04 21:19:09.740 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:19:09.740 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:19:09.740 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo.properties] & group[DEFAULT_GROUP]
+2020-08-04 21:19:09.740 INFO  [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:105] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-demo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-demo,DEFAULT_GROUP'}]
+2020-08-04 21:19:09.740 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 21:19:10.120 WARN  [org.mybatis.logging.Logger:44] - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2020-08-04 21:19:10.168 INFO  [org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=8c3aa684-4f15-3e61-a9e1-ce7d9a767b34
+2020-08-04 21:19:10.196 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$df1600af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:19:10.220 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 21:19:10.364 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:19:10.396 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:19:10.620 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 21:19:10.636 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:19:10.636 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 21:19:10.636 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 21:19:10.724 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 21:19:10.724 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 976 ms
+2020-08-04 21:19:10.764 WARN  [org.springframework.context.support.AbstractApplicationContext:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadController': Unsatisfied dependency expressed through field 'uploadservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uploadService': Unsatisfied dependency expressed through field 'messagemapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.demo.mapper.MessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-08-04 21:19:10.764 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Stopping service [Tomcat]
+2020-08-04 21:19:10.772 INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-04 21:19:10.852 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field messagemapper in com.example.demo.demoservice.UploadService required a bean of type 'com.example.demo.mapper.MessageMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.demo.mapper.MessageMapper' in your configuration.
+
+2020-08-04 21:28:54.870 INFO  [com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor:195] - LOCAL_SNAPSHOT_PATH:C:\Users\xjq\nacos\config
+2020-08-04 21:28:54.889 INFO  [com.alibaba.nacos.client.config.impl.Limiter:53] - limitTime:5.0
+2020-08-04 21:28:56.907 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:28:58.911 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:28:58.912 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:28:58.916 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:28:58.916 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:28:58.917 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:28:58.917 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo] & group[DEFAULT_GROUP]
+2020-08-04 21:29:00.920 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:29:02.924 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:29:02.925 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:29:02.926 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:145)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:29:02.926 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:29:02.927 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:29:02.928 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo.properties] & group[DEFAULT_GROUP]
+2020-08-04 21:29:02.929 INFO  [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:105] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-demo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-demo,DEFAULT_GROUP'}]
+2020-08-04 21:29:02.932 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 21:29:03.349 INFO  [org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=a30a9cec-8bab-37b2-a37a-94bad38fe631
+2020-08-04 21:29:03.386 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$29b4d715] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:29:03.408 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 21:29:03.548 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:29:03.582 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:29:03.801 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 21:29:03.807 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:29:03.808 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 21:29:03.808 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 21:29:03.894 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 21:29:03.895 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 952 ms
+2020-08-04 21:29:04.052 WARN  [com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+2020-08-04 21:29:04.053 INFO  [com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-04 21:29:04.056 WARN  [com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+2020-08-04 21:29:04.056 INFO  [com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-04 21:29:04.165 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 21:29:04.191 INFO  [com.alibaba.cloud.sentinel.SentinelWebAutoConfiguration:80] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2020-08-04 21:29:05.607 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-04 21:29:05.611 INFO  [com.alibaba.nacos.client.naming.utils.InitUtils$1:56] - initializer namespace from System Property :null
+2020-08-04 21:29:05.611 INFO  [com.alibaba.nacos.client.naming.utils.InitUtils$2:65] - initializer namespace from System Environment :null
+2020-08-04 21:29:05.612 INFO  [com.alibaba.nacos.client.naming.utils.InitUtils$3:75] - initializer namespace from System Property :null
+2020-08-04 21:29:07.145 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:29:07.159 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 21:29:07.161 INFO  [com.alibaba.nacos.client.naming.beat.BeatReactor:66] - [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":5006,"scheduled":false,"serviceName":"DEFAULT_GROUP@@demo","stopped":false,"weight":1.0} to beat map.
+2020-08-04 21:29:07.217 INFO  [com.alibaba.nacos.client.naming.net.NamingProxy:196] - [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@demo with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.56.1","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":5006,"weight":1.0}
+2020-08-04 21:29:09.236 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:29:09.236 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:29:13.262 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:29:13.263 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:29:14.232 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance/beat?app=demo&namespaceId=public&port=5006&clusterName=DEFAULT&ip=192.168.56.1&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8 from 127.0.0.1
+2020-08-04 21:29:14.233 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 21:29:17.290 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:29:17.291 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:29:18.260 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance/beat?app=demo&namespaceId=public&port=5006&clusterName=DEFAULT&ip=192.168.56.1&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8 from 127.0.0.1
+2020-08-04 21:29:18.260 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 21:29:21.316 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:29:21.316 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:29:22.292 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance/beat?app=demo&namespaceId=public&port=5006&clusterName=DEFAULT&ip=192.168.56.1&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8 from 127.0.0.1
+2020-08-04 21:29:22.293 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 21:29:23.329 ERROR [com.alibaba.nacos.client.naming.net.NamingProxy:492] - request: /nacos/v1/ns/instance failed, servers: [localhost:8848], code: 500, msg: java.net.ConnectException: Connection refused: connect
+2020-08-04 21:29:23.330 ERROR [com.alibaba.cloud.nacos.registry.NacosServiceRegistry:69] - nacos registry, demo register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='demo', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.56.1', networkInterface='', port=5006, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:29:23.332 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Pausing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:29:24.262 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Stopping service [Tomcat]
+2020-08-04 21:29:24.265 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Stopping ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:29:24.269 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Destroying ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:29:24.271 INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-04 21:29:24.274 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218] - Shutting down ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-04 21:29:24.277 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-04 21:29:24.293 ERROR [org.springframework.boot.SpringApplication:826] - Application run failed
+java.lang.reflect.UndeclaredThrowableException: null
+	at org.springframework.util.ReflectionUtils.rethrowRuntimeException(ReflectionUtils.java:147)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:73)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	... 20 common frames omitted
+2020-08-04 21:39:00.201 INFO  [com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor:195] - LOCAL_SNAPSHOT_PATH:C:\Users\xjq\nacos\config
+2020-08-04 21:39:00.221 INFO  [com.alibaba.nacos.client.config.impl.Limiter:53] - limitTime:5.0
+2020-08-04 21:39:02.237 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:39:04.240 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:39:04.241 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:39:04.245 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:142)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:04.245 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:39:04.246 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:39:04.246 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo] & group[DEFAULT_GROUP]
+2020-08-04 21:39:06.249 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:39:08.252 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:104] - [NACOS SocketTimeoutException httpGet] currentServerAddr:http://localhost:8848£¬ err : connect timed out
+2020-08-04 21:39:08.252 ERROR [com.alibaba.nacos.client.config.http.ServerHttpAgent:122] - no available server
+2020-08-04 21:39:08.253 ERROR [com.alibaba.nacos.client.config.impl.ClientWorker:235] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=demo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: no available server
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:123)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:48)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:230)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:143)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:92)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:74)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:204)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:191)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:145)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:97)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:626)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:08.253 WARN  [com.alibaba.nacos.client.config.NacosConfigService:154] - [fixed-localhost_8848] [get-config] get from server error, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:no available server
+2020-08-04 21:39:08.254 WARN  [com.alibaba.nacos.client.config.NacosConfigService:158] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=demo.properties, group=DEFAULT_GROUP, tenant=, config=
+2020-08-04 21:39:08.254 WARN  [com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder:87] - Ignore the empty nacos configuration and get it based on dataId[demo.properties] & group[DEFAULT_GROUP]
+2020-08-04 21:39:08.255 INFO  [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:105] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-demo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-demo,DEFAULT_GROUP'}]
+2020-08-04 21:39:08.260 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 21:39:08.683 INFO  [org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=a30a9cec-8bab-37b2-a37a-94bad38fe631
+2020-08-04 21:39:08.721 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$20ba4cdd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:39:08.744 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 21:39:08.882 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:39:08.918 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:39:09.139 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 21:39:09.145 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:39:09.146 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 21:39:09.146 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 21:39:09.231 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 21:39:09.231 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 961 ms
+2020-08-04 21:39:09.357 WARN  [com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+2020-08-04 21:39:09.357 INFO  [com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-04 21:39:09.359 WARN  [com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+2020-08-04 21:39:09.359 INFO  [com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-04 21:39:09.468 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 21:39:09.495 INFO  [com.alibaba.cloud.sentinel.SentinelWebAutoConfiguration:80] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2020-08-04 21:39:10.920 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-04 21:39:10.924 INFO  [com.alibaba.nacos.client.naming.utils.InitUtils$1:56] - initializer namespace from System Property :null
+2020-08-04 21:39:10.924 INFO  [com.alibaba.nacos.client.naming.utils.InitUtils$2:65] - initializer namespace from System Environment :null
+2020-08-04 21:39:10.925 INFO  [com.alibaba.nacos.client.naming.utils.InitUtils$3:75] - initializer namespace from System Property :null
+2020-08-04 21:39:12.455 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:39:12.469 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 21:39:12.471 INFO  [com.alibaba.nacos.client.naming.beat.BeatReactor:66] - [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":5006,"scheduled":false,"serviceName":"DEFAULT_GROUP@@demo","stopped":false,"weight":1.0} to beat map.
+2020-08-04 21:39:12.525 INFO  [com.alibaba.nacos.client.naming.net.NamingProxy:196] - [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@demo with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.56.1","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":5006,"weight":1.0}
+2020-08-04 21:39:14.544 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:39:14.544 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:18.574 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:39:18.575 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:19.537 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance/beat?app=demo&namespaceId=public&port=5006&clusterName=DEFAULT&ip=192.168.56.1&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8 from 127.0.0.1
+2020-08-04 21:39:19.538 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 21:39:22.601 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:39:22.601 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:23.556 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance/beat?app=demo&namespaceId=public&port=5006&clusterName=DEFAULT&ip=192.168.56.1&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8 from 127.0.0.1
+2020-08-04 21:39:23.557 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 21:39:26.619 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance?app=demo&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8&groupName=DEFAULT_GROUP&namespaceId=public&port=5006&enable=true&healthy=true&clusterName=DEFAULT from 127.0.0.1
+2020-08-04 21:39:26.620 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:27.587 WARN  [com.alibaba.nacos.client.naming.net.HttpClient:94] - failed to request http://localhost:8848/nacos/v1/ns/instance/beat?app=demo&namespaceId=public&port=5006&clusterName=DEFAULT&ip=192.168.56.1&serviceName=DEFAULT_GROUP%40%40demo&encoding=UTF-8 from 127.0.0.1
+2020-08-04 21:39:27.587 ERROR [com.alibaba.nacos.client.naming.net.HttpClient:102] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:82)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:343)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:108)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 21:39:28.635 ERROR [com.alibaba.nacos.client.naming.net.NamingProxy:492] - request: /nacos/v1/ns/instance failed, servers: [localhost:8848], code: 500, msg: java.net.ConnectException: Connection refused: connect
+2020-08-04 21:39:28.635 ERROR [com.alibaba.cloud.nacos.registry.NacosServiceRegistry:69] - nacos registry, demo register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='demo', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.56.1', networkInterface='', port=5006, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+2020-08-04 21:39:28.636 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Pausing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:39:29.586 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Stopping service [Tomcat]
+2020-08-04 21:39:29.589 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Stopping ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:39:29.592 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Destroying ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:39:29.593 INFO  [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-04 21:39:29.595 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218] - Shutting down ExecutorService 'Nacso-Watch-Task-Scheduler'
+2020-08-04 21:39:29.596 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-04 21:39:29.603 ERROR [org.springframework.boot.SpringApplication:826] - Application run failed
+java.lang.reflect.UndeclaredThrowableException: null
+	at org.springframework.util.ReflectionUtils.rethrowRuntimeException(ReflectionUtils.java:147)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:73)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:15)
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	... 20 common frames omitted
+2020-08-04 21:40:51.422 INFO  [org.springframework.boot.StartupInfoLogger:55] - Starting DemoApplication on PCforWork with PID 14672 (E:\IDEAprojects\test\src\main\java\com\wisely\demo\target\classes started by xjq in E:\IDEAprojects\test\src\main\java\com\wisely\demo)
+2020-08-04 21:40:51.424 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 21:40:51.906 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f33ceca5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 21:40:51.928 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 21:40:52.089 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 21:40:52.095 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:40:52.095 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 21:40:52.095 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 21:40:52.160 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 21:40:52.160 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 707 ms
+2020-08-04 21:40:52.351 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 21:40:52.478 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 21:40:52.492 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 21:40:52.494 INFO  [org.springframework.boot.StartupInfoLogger:61] - Started DemoApplication in 1.268 seconds (JVM running for 2.725)
+2020-08-04 21:41:29.629 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-04 21:41:29.630 INFO  [org.springframework.web.servlet.FrameworkServlet:525] - Initializing Servlet 'dispatcherServlet'
+2020-08-04 21:41:29.635 INFO  [org.springframework.web.servlet.FrameworkServlet:547] - Completed initialization in 5 ms
+2020-08-04 23:13:12.280 INFO  [org.springframework.boot.StartupInfoLogger:55] - Starting DemoApplication on PCforWork with PID 14452 (E:\IDEAprojects\test\src\main\java\com\wisely\demo\target\classes started by xjq in E:\IDEAprojects\test\src\main\java\com\wisely\demo)
+2020-08-04 23:13:12.280 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 23:13:12.792 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f4116eac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 23:13:12.816 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 23:13:12.972 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 23:13:12.980 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:13:12.980 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 23:13:12.980 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 23:13:13.044 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 23:13:13.044 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 732 ms
+2020-08-04 23:13:13.237 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 23:13:13.357 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:13:13.373 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 23:13:13.413 INFO  [org.springframework.boot.StartupInfoLogger:61] - Started DemoApplication in 1.348 seconds (JVM running for 2.876)
+2020-08-04 23:15:34.204 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-04 23:15:34.204 INFO  [org.springframework.web.servlet.FrameworkServlet:525] - Initializing Servlet 'dispatcherServlet'
+2020-08-04 23:15:34.209 INFO  [org.springframework.web.servlet.FrameworkServlet:547] - Completed initialization in 5 ms
+2020-08-04 23:17:02.596 INFO  [org.springframework.boot.StartupInfoLogger:55] - Starting DemoApplication on PCforWork with PID 13996 (E:\IDEAprojects\test\src\main\java\com\wisely\demo\target\classes started by xjq in E:\IDEAprojects\test\src\main\java\com\wisely\demo)
+2020-08-04 23:17:02.598 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 23:17:03.132 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1aa03eb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 23:17:03.156 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 23:17:03.313 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 23:17:03.319 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:17:03.320 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 23:17:03.320 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 23:17:03.383 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 23:17:03.384 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 754 ms
+2020-08-04 23:17:03.584 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 23:17:03.705 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:17:03.717 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 23:17:03.719 INFO  [org.springframework.boot.StartupInfoLogger:61] - Started DemoApplication in 1.334 seconds (JVM running for 2.969)
+2020-08-04 23:17:10.141 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-04 23:17:10.142 INFO  [org.springframework.web.servlet.FrameworkServlet:525] - Initializing Servlet 'dispatcherServlet'
+2020-08-04 23:17:10.145 INFO  [org.springframework.web.servlet.FrameworkServlet:547] - Completed initialization in 3 ms
+2020-08-04 23:17:34.975 INFO  [com.zaxxer.hikari.HikariDataSource:110] - HikariPool-1 - Starting...
+2020-08-04 23:17:36.277 INFO  [com.zaxxer.hikari.HikariDataSource:123] - HikariPool-1 - Start completed.
+2020-08-04 23:17:36.290 ERROR [org.apache.juli.logging.DirectJDKLog:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.demo.mapper.MessageMapper.insertinfo] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.demo.mapper.MessageMapper.insertinfo
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:227)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:49)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy59.insertinfo(Unknown Source)
+	at com.example.demo.demoservice.UploadService.addMessage(UploadService.java:18)
+	at com.example.demo.demoservice.UploadService$$FastClassBySpringCGLIB$$90a51d9e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.example.demo.demoservice.UploadService$$EnhancerBySpringCGLIB$$659416c7.addMessage(<generated>)
+	at com.example.demo.democontorller.UploadController.uploadMassage(UploadController.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-04 23:23:38.063 INFO  [org.springframework.boot.StartupInfoLogger:55] - Starting DemoApplication on PCforWork with PID 3948 (E:\IDEAprojects\test\src\main\java\com\wisely\demo\target\classes started by xjq in E:\IDEAprojects\test\src\main\java\com\wisely\demo)
+2020-08-04 23:23:38.065 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 23:23:38.583 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$64cd0310] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 23:23:38.607 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 23:23:38.774 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 23:23:38.779 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:23:38.780 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 23:23:38.780 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 23:23:38.842 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 23:23:38.842 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 746 ms
+2020-08-04 23:23:39.097 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 23:23:39.257 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:23:39.270 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 23:23:39.272 INFO  [org.springframework.boot.StartupInfoLogger:61] - Started DemoApplication in 1.419 seconds (JVM running for 2.881)
+2020-08-04 23:23:48.331 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-04 23:23:48.332 INFO  [org.springframework.web.servlet.FrameworkServlet:525] - Initializing Servlet 'dispatcherServlet'
+2020-08-04 23:23:48.337 INFO  [org.springframework.web.servlet.FrameworkServlet:547] - Completed initialization in 5 ms
+2020-08-04 23:23:48.349 WARN  [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:199] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-04 23:24:06.577 INFO  [com.zaxxer.hikari.HikariDataSource:110] - HikariPool-1 - Starting...
+2020-08-04 23:24:07.754 INFO  [com.zaxxer.hikari.HikariDataSource:123] - HikariPool-1 - Start completed.
+2020-08-04 23:59:28.389 INFO  [org.springframework.boot.StartupInfoLogger:55] - Starting DemoApplication on PCforWork with PID 10224 (E:\IDEAprojects\test\src\main\java\com\wisely\demo\target\classes started by xjq in E:\IDEAprojects\test\src\main\java\com\wisely\demo)
+2020-08-04 23:59:28.391 INFO  [org.springframework.boot.SpringApplication:651] - No active profile set, falling back to default profiles: default
+2020-08-04 23:59:28.907 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d7c58828] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-04 23:59:28.929 INFO  [org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-08-04 23:59:29.087 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:91] - Tomcat initialized with port(s): 5006 (http)
+2020-08-04 23:59:29.092 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:59:29.093 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+2020-08-04 23:59:29.093 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-04 23:59:29.155 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+2020-08-04 23:59:29.155 INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:283] - Root WebApplicationContext: initialization completed in 730 ms
+2020-08-04 23:59:29.391 INFO  [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-04 23:59:29.543 INFO  [org.apache.juli.logging.DirectJDKLog:173] - Starting ProtocolHandler ["http-nio-5006"]
+2020-08-04 23:59:29.556 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:203] - Tomcat started on port(s): 5006 (http) with context path ''
+2020-08-04 23:59:29.558 INFO  [org.springframework.boot.StartupInfoLogger:61] - Started DemoApplication in 1.364 seconds (JVM running for 2.91)
